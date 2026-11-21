@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 900" width="520" height="900">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1a30"/><stop offset="1" stop-color="#102a45"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#1769aa" stop-opacity=".65"/><stop offset="1" stop-color="#1769aa" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#e8eef6" stroke-opacity=".08" stroke-width="1"/></pattern>
+ <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="url(#bg)"/><rect width="100%" height="100%" fill="url(#grid)"/>
+<circle cx="400" cy="175" r="210" fill="url(#glow)" filter="url(#blur)"/>
+<g fill="none" stroke="#e8eef6" stroke-opacity=".28"><rect x="62" y="190" width="396" height="500" rx="26"/><path d="M62 275H458M62 565H458"/></g>
+<g font-family="monospace" fill="#e8eef6"><text x="92" y="240" font-size="23">PARKING / STATUS</text><text x="92" y="330" font-size="18" opacity=".65">AVAILABLE</text><text x="92" y="410" font-size="64" fill="#1769aa">09</text><text x="250" y="410" font-size="64" fill="#f0183c">03</text><text x="92" y="455" font-size="17" opacity=".7">BAYS OPEN</text><text x="250" y="455" font-size="17" opacity=".7">OCCUPIED</text><text x="92" y="625" font-size="18" opacity=".65">VEHICLE ID</text></g>
+<rect x="92" y="642" width="336" height="22" rx="11" fill="#1769aa" fill-opacity=".25"/><rect x="92" y="642" width="214" height="22" rx="11" fill="#f0183c"/>
+<path d="M36 820H484" stroke="#e8eef6" stroke-opacity=".2"/>
+<path d="M36 820H170" stroke="#f0183c" stroke-width="4" stroke-linecap="round"/>
+<circle cx="484" cy="820" r="5" fill="#1769aa"/>
+</svg>

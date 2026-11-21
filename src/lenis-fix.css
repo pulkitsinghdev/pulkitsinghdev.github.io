@@ -1,0 +1,75 @@
+/* Lenis / document-scroll compatibility. Import after global.css. */
+/* Keep native document scrolling as Lenis' root scroll container. */
+html,
+body,
+#root {
+  min-height: 100%;
+  height: auto;
+}
+
+html {
+  overflow-x: clip !important;
+  overflow-y: auto !important;
+  scroll-behavior: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+body {
+  margin: 0;
+  overflow-x: clip !important;
+  overflow-y: auto !important;
+  touch-action: pan-y;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+#root {
+  position: relative;
+  overflow: visible !important;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+html.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Decorative website copy is intentionally not selectable.
+   Buttons, links, inputs and controls remain operable. */
+body,
+#root,
+.mgn-root,
+.mgn-root * {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+button,
+a {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto !important;
+  }
+}

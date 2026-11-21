@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "project": {
+    "name": "pulkit-h-singh-portfolio",
+    "productType": null,
+    "stack": [
+      "react",
+      "vite"
+    ]
+  },
+  "sources": {
+    "tokens": [],
+    "components": [
+      "src/components/ui"
+    ],
+    "assets": [],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "dark",
+    "colors": {
+      "background": "#071525",
+      "surface": "#0a1a30",
+      "text": "#e8eef6",
+      "blue": "#1769aa",
+      "cyan": "#63c8e8",
+      "accent": "#f0183c"
+    },
+    "typography": {
+      "display": "DM Serif Display",
+      "body": "Poppins",
+      "utility": "ui-monospace"
+    },
+    "spacing": {},
+    "radius": {
+      "cards": "4px"
+    },
+    "shadows": {},
+    "motion": {
+      "experience": "Chronological cards stay in normal document flow; the card nearest the viewport center moves forward while upcoming cards rise from below and past cards recede upward. CSS transitions reverse on scroll-up and honor reduced-motion preferences.",
+      "opening": "A restrained word reveal writes PULKIT, then scales and moves into the matching cover headline; no portal artwork is used."
+    },
+    "density": "editorial"
+  },
+  "components": {
+    "installed": [
+      "warp-carousel"
+    ],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [
+      "Keep the portfolio's navy, cyan and red Earth-928 visual identity.",
+      "Keep experience and community roles in chronological scroll order."
+    ],
+    "avoid": [
+      "Avoid overlapping experience cards and manual carousel controls.",
+      "Avoid literal portal imagery and decorative effects that compete with the portfolio content."
+    ]
+  },
+  "decisions": [
+    {
+      "decision": "Experience and writing cards remain in chronological document flow. The nearest card rises into focus; previous cards move up and fade while upcoming cards rise from below. The states reverse naturally when scrolling upward.",
+      "date": "2026-11-21",
+      "source": "User asked for a bottom-to-front card transition with fading on scroll and rejected the existing blurred, disappearing card treatment."
+    },
+    {
+      "decision": "The opening writes PULKIT and transforms that word into the matching cover headline; the provided portal reference is not embedded or redrawn literally.",
+      "date": "2026-11-21",
+      "source": "User proposed a writing-style name loader that becomes the cover text and rejected the portal treatment."
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "components.installed",
+      "source": "src/components/ui"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:vite",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-11-20T22:53:17.000Z"
+}
