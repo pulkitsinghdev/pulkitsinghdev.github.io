@@ -78,6 +78,7 @@ export type MgnSection = "cover" | "hello" | "education" | "experience" | "commu
 
 export type PulkitPortfolioProps = {
   name?: string
+  /** Short role tagline displayed beneath the cover name. */
   role?: string
   year?: string
   location?: string
@@ -2417,10 +2418,7 @@ function Cover({ info, title, name, role, year, location, docLabel, inkTrail }: 
           </span>
         </h1>
         <div className="mgn-pill-wrap">
-          <span className="mgn-pill">
-            {role}
-            <PenMark kind="oval" seed={9} padX={12} padY={9} />
-          </span>
+          <span className="mgn-pill">{role}</span>
         </div>
       </div>
       <div className="mgn-cover-meta">
