@@ -33,30 +33,6 @@ Create and preview a production build:
 
 The built site is written to the dist/ folder.
 
-## Deploy to GitHub Pages
-
-The workflow at .github/workflows/deploy.yml builds and deploys dist/ whenever main is updated. The repository should be pulkitsinghdev.github.io, with main as its default branch.
-
-1. Push the project to https://github.com/pulkitsinghdev/pulkitsinghdev.github.io on main.
-2. In the repository, open **Settings → Pages** and choose **GitHub Actions** under **Build and deployment**.
-3. Check the **Actions** tab. After the deployment workflow finishes, the site will be available at https://pulkitsinghdev.github.io.
-
-### Connect pulkitsingh.tech
-
-Verify ownership before connecting the domain. On GitHub, open your profile **Settings → Pages → Add a domain**, enter pulkitsingh.tech, then add the TXT record GitHub provides in Namify. Keep this TXT record after verification. Namify's DNS editor is under **Manage → DNS**; if DNS is managed by custom nameservers, make the changes at that DNS provider instead.
-
-After GitHub marks the domain verified, open this repository's **Settings → Pages**, select **GitHub Actions** as the publishing source, and enter pulkitsingh.tech as the custom domain. Then add these records in the active DNS editor:
-
-| Type | Name | Value |
-| --- | --- | --- |
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | pulkitsinghdev.github.io |
-
-Remove only conflicting parking records and A/AAAA records for @ or a conflicting www record. Keep MX/TXT records used for email or domain verification. Wait for GitHub's DNS check and HTTPS certificate, then turn on **Enforce HTTPS**. DNS changes can take up to 24 hours to propagate. This Actions workflow does not require a CNAME file in the repository. See [GitHub's domain verification guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages) and [Namify's DNS guide](https://helpdesk.namify.tech/en/articles/10353226-how-to-add-edit-or-delete-dns-records).
-
 ## Project map
 
 - src/App.tsx — site configuration and portfolio content.
