@@ -1300,10 +1300,10 @@ const FINAL_POLISH_CSS = `
 .mgn-experience-section,.mgn-writing-section{justify-content:flex-start;padding-top:clamp(86px,9cqi,140px)}
 .mgn-experience-wrap,.mgn-writing-archive{width:100%;max-width:1400px;margin:0 auto}
 .mgn-scroll-archive{position:relative;display:grid;gap:clamp(18px,2.5cqi,30px);width:min(100%,1120px);margin:clamp(28px,4cqi,52px) auto 0;perspective:1200px}
-.mgn-scroll-card{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:center;min-height:clamp(400px,58svh,620px);padding:clamp(28px,4.5cqi,62px);overflow:hidden;border:1px solid rgba(126,183,238,.22);border-radius:3px;background:linear-gradient(140deg,rgba(10,26,48,.97),rgba(7,21,37,.98));box-shadow:0 26px 72px -54px rgba(0,0,0,.92);transform-style:preserve-3d;backface-visibility:hidden;opacity:.42;transform:translate3d(0,38px,-86px) scale(.975);transition:transform .62s cubic-bezier(.22,.61,.36,1),opacity .62s ease,border-color .35s ease,box-shadow .35s ease;will-change:transform,opacity}
-.mgn-scroll-card[data-phase="past"]{opacity:.25;transform:translate3d(0,-30px,-72px) scale(.97)}
-.mgn-scroll-card[data-phase="active"]{opacity:1;transform:translate3d(0,0,0) scale(1)}
-.mgn-scroll-card[data-phase="next"]{opacity:.42;transform:translate3d(0,38px,-86px) scale(.975)}
+.mgn-scroll-card{position:relative;z-index:0;isolation:isolate;display:flex;flex-direction:column;justify-content:center;min-height:clamp(400px,58svh,620px);padding:clamp(28px,4.5cqi,62px);overflow:hidden;border:1px solid rgba(126,183,238,.22);border-radius:3px;background:linear-gradient(140deg,rgba(10,26,48,.97),rgba(7,21,37,.98));box-shadow:0 26px 72px -54px rgba(0,0,0,.92);transform-style:preserve-3d;backface-visibility:hidden;opacity:.42;transform:translate3d(0,38px,-86px) scale(.975);transition:transform .62s cubic-bezier(.22,.61,.36,1),opacity .62s ease,border-color .35s ease,box-shadow .35s ease;will-change:transform,opacity}
+.mgn-scroll-card[data-phase="past"]{z-index:0;opacity:.25;transform:translate3d(0,-30px,-72px) scale(.97)}
+.mgn-scroll-card[data-phase="active"]{z-index:2;opacity:1;transform:translate3d(0,0,0) scale(1)}
+.mgn-scroll-card[data-phase="next"]{z-index:1;opacity:.42;transform:translate3d(0,38px,-86px) scale(.975)}
 .mgn-scroll-card:before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,rgba(240,24,60,.8),rgba(99,200,232,.5),transparent 76%);opacity:.64}
 .mgn-scroll-card[data-active="true"]{border-color:rgba(99,200,232,.5);box-shadow:0 34px 90px -58px rgba(23,105,170,.65),inset 0 1px 0 rgba(232,238,246,.07);opacity:1}
 .mgn-scroll-card-head{display:flex;justify-content:space-between;align-items:center;gap:18px;color:#ff526c;font:10px ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase}
@@ -3125,7 +3125,7 @@ function SocialMark({ label }: { label: string }) {
     case "devpost":
       return <svg {...common}><path d="M4 2.5h9.2c5.1 0 8.8 3.8 8.8 9.5s-3.7 9.5-8.8 9.5H4V2.5Zm5 4.2v10.6h4.2c2.4 0 3.9-2 3.9-5.3s-1.5-5.3-3.9-5.3H9Z"/></svg>;
     case "devfolio":
-      return <svg {...common} viewBox="0 0 60.3 66.2"><path fill="#3770FF" d="M60.3,36.4C60.3,52,48.6,64.7,33.8,66c0,0-19.1,0.5-25.4-0.1c-2.4-0.3-4.4-1.8-5.3-4c0.9,0.4,1.8,0.7,2.8,0.8C8,62.9,11.5,63,16.4,63c7.2,0,15.1-0.2,15.1-0.2h0.1c7.9-0.7,15.2-4.3,20.4-10.2c4.5-5,7.4-11.3,8.2-17.9C60.3,35.2,60.3,35.8,60.3,36.4z"/><path fill="#3770FF" d="M58,30c0,15.6-11.7,28.3-26.6,29.5c0,0-19.1,0.5-25.4-0.1c-3.4-0.3-5.9-3.5-6-7.1l0.1-45c0.1-3.6,2.7-6.8,6.1-7.1c6.3-0.5,25.4,0.1,25.4,0.1C46.4,1.6,58,14.4,58,30z"/></svg>;
+      return <svg {...common} viewBox="0 0 60.3 66.2"><path fill="#E8EEF6" d="M60.3,36.4C60.3,52,48.6,64.7,33.8,66c0,0-19.1,0.5-25.4-0.1c-2.4-0.3-4.4-1.8-5.3-4c0.9,0.4,1.8,0.7,2.8,0.8C8,62.9,11.5,63,16.4,63c7.2,0,15.1-0.2,15.1-0.2h0.1c7.9-0.7,15.2-4.3,20.4-10.2c4.5-5,7.4-11.3,8.2-17.9C60.3,35.2,60.3,35.8,60.3,36.4z"/><path fill="#E8EEF6" d="M58,30c0,15.6-11.7,28.3-26.6,29.5c0,0-19.1,0.5-25.4-0.1c-3.4-0.3-5.9-3.5-6-7.1l0.1-45c0.1-3.6,2.7-6.8,6.1-7.1c6.3-0.5,25.4,0.1,25.4,0.1C46.4,1.6,58,14.4,58,30z"/></svg>;
     case "devto":
       return <svg {...common}><path d="M3 3h18v18H3V3Zm3.1 5.1v7.8h2.4c2.1 0 3.3-1.3 3.3-3.9s-1.2-3.9-3.3-3.9H6.1Zm1.9 1.6h.4c1 0 1.5.7 1.5 2.3s-.5 2.3-1.5 2.3H8V9.7Zm5.2-1.6v7.8h4.9v-1.6h-3v-1.6h2.7v-1.6h-2.7V9.7h3V8.1h-4.9Z"/></svg>;
     case "sessionize":
