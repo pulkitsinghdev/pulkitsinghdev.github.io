@@ -1,5 +1,5 @@
-# Pulkit Singh — Portfolio
-
+# Pulkit Singh - Portfolio
+<img width="1865" height="932" alt="image" src="https://github.com/user-attachments/assets/b548d107-e8c1-4399-88b0-d8f715d98f77" />
 A personal portfolio for Pulkit Singh, built as an editorial field archive. It brings together software projects, open-source and community work, writing, talks, education, and recognition in one responsive site.
 
 ## The site
